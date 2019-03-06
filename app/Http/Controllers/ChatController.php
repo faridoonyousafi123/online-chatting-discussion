@@ -22,7 +22,7 @@ class ChatController extends Controller
 
     public function chat() {
 
-        return view('chatting');
+        return view('chatting')->with('user', User::all());
 
     }
 
@@ -30,7 +30,7 @@ class ChatController extends Controller
 
         // return $request->all();
         $user = User::find(Auth::id());
-
+        
         event(new ChatEvents($request->message, $user));
     }
 

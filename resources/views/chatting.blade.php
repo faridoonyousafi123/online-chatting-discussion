@@ -24,8 +24,8 @@
       </div>
       <ul class="list">
 
-        <li class="clearfix" v-for="user in onlineUsers">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg" alt="avatar" />
+        <li class="clearfix" v-for="user,index in onlineUsers">
+          <img class="image" :src="user.avatar" alt="avatar" />
           <div class="about">
             <div class="name">@{{ user.name }}  </div>
             <div class="status">

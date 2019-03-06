@@ -10,6 +10,12 @@ body {
   color: white;
 }
 
+.image{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
 .container {
   margin: 0 auto;
   width: 750px;

@@ -5,7 +5,7 @@ window.Vue = require('vue');
 
 Vue.component('message', require('./components/message.vue').default);
 Vue.component('sent-message', require('./components/SentMessage.vue').default);
-
+Vue.component('online-users', require('./components/onlineUsers.vue').default);
 
 
 import Vue from 'vue'
@@ -108,6 +108,7 @@ const app = new Vue({
      Echo.join(`chat`)
     .here((users) => {
         this.onlineUsers = users
+         
     })
     .joining((user) => {
         this.onlineUsers.push(user);
